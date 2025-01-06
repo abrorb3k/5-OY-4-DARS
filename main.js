@@ -77,21 +77,21 @@ btn && btn.addEventListener('click',function(){
 // 6-Tugmalar bilan rang o‘zgartirish
 // Vazifa: Sahifada bir nechta rangli kvadratlar bo‘lsin. Har bir kvadratning tagida "Chapga qo‘shish" va "O‘ngga qo‘shish" tugmalari joylashtiriladi. Tugma bosilganda kvadratning chap yoki o‘ng tomoniga yangi kvadrat qo‘shilsin.
 // Ishlatiladigan mavzular: createElement, before, after, classList.add.
-// const card=document.getElementById(card)
-// const buttons=document.querySelectorAll('button');
-// buttons.length>0 && buttons.forEach(button=>{
-//     button && button.addEventListener('click',function(){
-//         let block=document.createElement('div')
-//         block.style.height='200px'
-//         block.style.width = "200px";
-//         block.style.backgroundColor = "yellow";
-//         if(this.innerHTML=='right'){
-//             card.after(block)
-//         }else{
-//             card.before(block)
-//         }
-//     })
-// })
+const card=document.getElementById(card)
+const buttons=document.querySelectorAll('button');
+buttons.length>0 && buttons.forEach(button=>{
+    button && button.addEventListener('click',function(){
+        let block=document.createElement('div')
+        block.style.height='200px'
+        block.style.width = "200px";
+        block.style.backgroundColor = "yellow";
+        if(this.innerHTML=='right'){
+            card.after(block)
+        }else{
+            card.before(block)
+        }
+    })
+})
 
 // =========================================================================================
 // =========================================================================================
