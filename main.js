@@ -59,16 +59,16 @@ button && button.addEventListener('click',function(){
 // 5-Maqolani o‘zgartirish
 // Vazifa: Sahifada bir nechta paragraflar va bitta "Yangi paragraf qo‘shish" tugmasi bo‘lsin. Tugma bosilganda yangi paragraf qo‘shilsin va u maqolaning oxiriga yoki boshiga joylashtirilsin (foydalanuvchi oldindan tanlaydi).
 // Ishlatiladigan mavzular: createElement, append, prepend.
-const card=document.getElementById('card')
+const cardd=document.getElementById('card')
 const btn=document.getElementById('btn')
 const check = document.getElementById("check");
 btn && btn.addEventListener('click',function(){
     const p=document.createElement('p')
     p.innerHTML='new paragraph';
     if(check.checked){
-        card.prepend(p)
+        cardd.prepend(p)
     }else{
-        card.append(p)
+        cardd.append(p)
     }
 })
 
@@ -78,8 +78,8 @@ btn && btn.addEventListener('click',function(){
 // Vazifa: Sahifada bir nechta rangli kvadratlar bo‘lsin. Har bir kvadratning tagida "Chapga qo‘shish" va "O‘ngga qo‘shish" tugmalari joylashtiriladi. Tugma bosilganda kvadratning chap yoki o‘ng tomoniga yangi kvadrat qo‘shilsin.
 // Ishlatiladigan mavzular: createElement, before, after, classList.add.
 const card=document.getElementById(card)
-const buttons=document.querySelectorAll('button');
-buttons.length>0 && buttons.forEach(button=>{
+const buttonss=document.querySelectorAll('button');
+buttonss.length>0 && buttonss.forEach(button=>{
     button && button.addEventListener('click',function(){
         let block=document.createElement('div')
         block.style.height='200px'
