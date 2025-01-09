@@ -3,18 +3,18 @@
 // // 1-Rasm galereyasini yaratish
 // // Vazifa: Sahifada bir nechta bo‘sh kvadratlar (div) bo‘lsin. Har bir kvadrat ustiga "Rasm qo‘shish" tugmasi bo‘lsin. Tugma bosilganda yangi rasm (img elementi) kvadratning ichiga qo‘shilsin. Kvadrat ichida avvaldan rasm bo‘lsa, o‘sha rasmni o‘chirib, yangisini qo‘shsin.
 // // Ishlatiladigan mavzular: createElement, append, removeChild, classList.toggle.
-// const buttons = document.querySelectorAll("button");
-// const square = document.querySelectorAll(".square");
-// buttons.forEach((button, index) => {
-//   button.addEventListener("click", function () {
-//     const image = document.createElement("img");
-//     image.setAttribute("src", "https://picsum.photos/seed/picsum/200/300");
-//     image.setAttribute("alt", "new image");
-//     image.style.maxWidth = "100%";
-//     image.style.maxHeight = "100%";
-//     square[index].append(image);
-//   });
-// });
+const butt = document.querySelectorAll("button");
+const square = document.querySelectorAll(".square");
+butt.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    const image = document.createElement("img");
+    image.setAttribute("src", "https://picsum.photos/seed/picsum/200/300");
+    image.setAttribute("alt", "new image");
+    image.style.maxWidth = "100%";
+    image.style.maxHeight = "100%";
+    square[index].append(image);
+  });
+});
 
 // // =========================================================================================
 // // =========================================================================================
@@ -24,29 +24,29 @@
 // // Oldingi qoshni elementi (previousSibling),
 // // Keyingi qoshni elementi (nextSibling),
 // // Ichidagi barcha bolalari (childNodes) chiqarilsin (matn yoki alert orqali).
-// const Items = document.querySelectorAll("li");
-// Items.length &&
-//   Items.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       console.log(this.parentNode);
-//       console.log(this.previousElementSibling);
-//       console.log(this.nextElementSibling);
-//       console.log(this.childNodes);
-//     });
-//   });
+const Items = document.querySelectorAll("li");
+Items.length &&
+  Items.forEach((item) => {
+    item.addEventListener("click", function () {
+      console.log(this.parentNode);
+      console.log(this.previousElementSibling);
+      console.log(this.nextElementSibling);
+      console.log(this.childNodes);
+    });
+  });
 
 // // =========================================================================================
 // // =========================================================================================
 // // 3-Sahifadagi elementlarni almashish
 // // Vazifa: Sahifada ikkita kvadrat (div) bo‘lsin. Har bir kvadrat ichida matn yozilgan bo‘lsin. Foydalanuvchi tugma bosganda, ushbu kvadratlarning o‘z ichidagi matnlari almashib qolsin.
 // // Ishlatiladigan mavzular: parentNode, appendChild, before, after.
-// const button = document.querySelector("button");
-// const text1 = document.getElementById("text1");
-// const text2 = document.getElementById("text2");
-// button &&
-//   button.addEventListener("click", function () {
-//     [text1.innerHTML, text2.innerHTML] = [text2.innerHTML, text1.innerHTML];
-//   });
+const button = document.querySelector("#button33");
+const text1 = document.getElementById("text1");
+const text2 = document.getElementById("text2");
+button &&
+  button.addEventListener("click", function () {
+    [text1.innerHTML, text2.innerHTML] = [text2.innerHTML, text1.innerHTML];
+  });
 
 // // =========================================================================================
 // // =========================================================================================
@@ -59,45 +59,43 @@
 // // 5-Maqolani o‘zgartirish
 // // Vazifa: Sahifada bir nechta paragraflar va bitta "Yangi paragraf qo‘shish" tugmasi bo‘lsin. Tugma bosilganda yangi paragraf qo‘shilsin va u maqolaning oxiriga yoki boshiga joylashtirilsin (foydalanuvchi oldindan tanlaydi).
 // // Ishlatiladigan mavzular: createElement, append, prepend.
-// const cardd = document.getElementById("card");
-// const btn = document.getElementById("btn");
-// const check = document.getElementById("check");
-// btn &&
-//   btn.addEventListener("click", function () {
-//     const p = document.createElement("p");
-//     p.innerHTML = "new paragraph";
-//     if (check.checked) {
-//       cardd.prepend(p);
-//     } else {
-//       cardd.append(p);
-//     }
-//   });
+const cardd = document.getElementById("card");
+const button55 = document.getElementById("button55");
+const check = document.getElementById("check"); 
+button55 &&
+ button55.addEventListener("click", function () {
+    const p = document.createElement("p");
+    p.innerHTML = "new paragraph";
+    if (check.checked) {
+      cardd.prepend(p);
+    } else {
+      cardd.append(p);
+    }
+  });
 
 // // =========================================================================================
 // // =========================================================================================
 // // 6-Tugmalar bilan rang o‘zgartirish
 // // Vazifa: Sahifada bir nechta rangli kvadratlar bo‘lsin. Har bir kvadratning tagida "Chapga qo‘shish" va "O‘ngga qo‘shish" tugmalari joylashtiriladi. Tugma bosilganda kvadratning chap yoki o‘ng tomoniga yangi kvadrat qo‘shilsin.
 // Ishlatiladigan mavzular: createElement, before, after, classList.add.
-// const card = document.getElementById('card');
-// const buttonss = document.querySelectorAll("button");
+const card = document.getElementById('card');
+const button66 = document.querySelectorAll(".button66");
+ button66.length>0 && button66.forEach((button6666) => {
+   button6666 && button6666.addEventListener("click", function () {
+      let block = document.createElement("div");
+      block.style.height = "200px";
+      block.style.width = "200px";
+      block.style.display='inline-block'
+      block.style.backgroundColor = "yellow";
+      block.style.margin='15px'
 
-
-//  buttonss.length>0 && buttonss.forEach((button) => {
-//    button && button.addEventListener("click", function () {
-//       let block = document.createElement("div");
-//       block.style.height = "200px";
-//       block.style.width = "200px";
-//       block.style.display='inline-block'
-//       block.style.backgroundColor = "yellow";
-//       block.style.margin='15px'
-
-//       if (this.innerHTML == "Left") {
-//         card.before(block);
-//       }else{
-//         card.after(block)
-//       }
-//     });
-//   });
+      if (this.innerHTML == "Left") {
+        card.before(block);
+      }else{
+        card.after(block)
+      }
+    });
+  });
 
 
 
@@ -107,24 +105,24 @@
 // // 7-Tugmani yashirish va qayta ko‘rsatish
 // // Vazifa: Sahifada bir nechta tugmalar bo‘lsin. Har bir tugmaning yonida "Yashirish" tugmasi bo‘lsin. "Yashirish" tugmasi bosilganda asosiy tugma yashirinadi. Sahifaning pastida "Yashirilgan tugmalarni ko‘rsatish" tugmasi bo‘lib, u barcha yashirilgan tugmalarni qayta ko‘rsatadi.
 // // Ishlatiladigan mavzular: remove, appendChild, classList.toggle.
-// const hidebuttons=document.querySelectorAll('.hide')
-// const show = document.getElementById("show");
-// const mainbuttons=document.querySelectorAll('.main')
+const hidebuttons=document.querySelectorAll('.hide')
+const show = document.getElementById("show");
+const mainbuttons=document.querySelectorAll('.main')
 
-// hidebuttons.length &&
-//   hidebuttons.forEach((hide) => {
-//     hide &&
-//       hide.addEventListener("click", function () {
-//         this.previousElementSibling.style.display = "none";
-//       });
-//   });
-// show &&
-//   show.addEventListener("click", function () {
-//     mainbuttons.length &&
-//       mainbuttons.forEach(function (main) {
-//         main.style.display = "inline";
-//       });
-//   });
+hidebuttons.length &&
+  hidebuttons.forEach((hide) => {
+    hide &&
+      hide.addEventListener("click", function () {
+        this.previousElementSibling.style.display = "none";
+      });
+  });
+show &&
+  show.addEventListener("click", function () {
+    mainbuttons.length &&
+      mainbuttons.forEach(function (main) {
+        main.style.display = "inline";
+      });
+  });
 
 // // =========================================================================================
 // // =========================================================================================
@@ -138,28 +136,28 @@
 // // Vazifa: Sahifada bir nechta rang tugmalari bo‘lsin (masalan, "qizil", "ko‘k", "yashil"). Foydalanuvchi rang tugmalaridan birini bossa, asosiy blokning (katta kvadratning) foni tanlangan rangga o‘zgaradi. Tanlangan tugmaga "faol" klassi qo‘shilsin.
 // // Ishlatiladigan mavzular: classList.add, classList.contains, style.backgroundColor.
 // // Rang tugmalari va asosiy blokni olish
-// const redButton = document.getElementById("redButton");
-// const blueButton = document.getElementById("blueButton");
-// const greenButton = document.getElementById("greenButton");
-// const mainBlock = document.getElementById("mainBlock");
+const redButton = document.getElementById("redButton");
+const blueButton = document.getElementById("blueButton");
+const greenButton = document.getElementById("greenButton");
+const mainBlock = document.getElementById("mainBlock");
 
-// redButton.addEventListener("click", function () {
-//   changeColor("red", redButton);
-// });
-// blueButton.addEventListener("click", function () {
-//   changeColor("blue", blueButton);
-// });
-// greenButton.addEventListener("click", function () {
-//   changeColor("green", greenButton);
-// });
+redButton.addEventListener("click", function () {
+  changeColor("red", redButton);
+});
+blueButton.addEventListener("click", function () {
+  changeColor("blue", blueButton);
+});
+greenButton.addEventListener("click", function () {
+  changeColor("green", greenButton);
+});
 
-// function changeColor(color, button) {
-//   mainBlock.style.backgroundColor = color;
-//   document.querySelectorAll(".color-button").forEach((btn) => {
-//     btn.classList.remove("active-button");
-//   });
-//   button.classList.add("active-button");
-// }
+function changeColor(color, button) {
+  mainBlock.style.backgroundColor = color;
+  document.querySelectorAll(".color-button").forEach((btn) => {
+    btn.classList.remove("active-button");
+  });
+  button.classList.add("active-button");
+}
 
 // // =========================================================================================
 // // =========================================================================================
@@ -172,49 +170,49 @@
 // // 11-"Ko‘rinadigan va Yashirin" elementlar
 // // Vazifa: Sahifada bir nechta blok (div) elementlari bo‘lsin. Ularning barchasi ko‘rinadigan holatda bo‘lsin. Har bir blok yonida "Yashirish" tugmasi bo‘lsin. Tugma bosilganda blok yashiringan bo‘lsin (display: none; usuli orqali). Sahifaning pastida "Hammasini ko‘rsatish" tugmasi bo‘lsin, bu barcha yashirilgan bloklarni qayta ko‘rsatadi.
 // // Ishlatiladigan mavzular: style, classList.toggle, classList.add.
-// const hidebuttons = document.querySelectorAll(".hide");
-// const show = document.getElementById("show");
-// const mainbuttons = document.querySelectorAll(".main");
-// hidebuttons.length &&
-//   hidebuttons.forEach((hide) => {
-//     hide &&
-//       hide.addEventListener("click", function () {
-//         this.previousElementSibling.style.display = "none";
-//       });
-//   });
-// show &&
-//   show.addEventListener("click", function () {
-//     mainbuttons.length &&
-//       mainbuttons.forEach(function (main) {
-//         main.style.display = "inline";
-//       });
-//   });
+const hidebuttons1111 = document.querySelectorAll(".hide1111");
+const show1111 = document.getElementById("show1111");
+const mainbuttons1111 = document.querySelectorAll(".main");
+hidebuttons1111.length &&
+  hidebuttons1111.forEach((hide) => {
+    hide &&
+      hide.addEventListener("click", function () {
+        this.previousElementSibling.style.display = "none";
+      });
+  });
+show1111 &&
+  show1111.addEventListener("click", function () {
+    mainbuttons1111.length &&
+      mainbuttons1111.forEach(function (main) {
+        main.style.display = "inline";
+      });
+  });
 
 // // =========================================================================================
 // // =========================================================================================
 // // 12-Karta o‘yinlarini almashtirish
 // // Vazifa: Sahifada bir nechta rangli kvadratlar (div) bo‘lsin. Har bir kvadratni boshqa kvadrat bilan almashtirish tugmasi bo‘lsin. Tugma bosilganda, o‘sha kvadrat boshqa tanlangan kvadrat bilan joylarini almashtirsin (ularni DOM ichida joylashtirish tartibi o‘zgaradi).
 // // Ishlatiladigan mavzular: parentNode, replaceChild, appendChild.
-//  const container = document.getElementById("container");
-//  const swapButtons = document.querySelectorAll(".swapButton");
+ const container = document.getElementById("container");
+ const swapButtons = document.querySelectorAll(".swapButton");
 
-//  swapButtons.forEach((button) => {
-//    button.addEventListener("click", function () {
-//      const squareA = this.parentNode;
-//      let squareB = squareA.nextElementSibling;
-//      if (!squareB) {
-//        squareB = squareA.previousElementSibling;
-//      }
+ swapButtons.forEach((button) => {
+   button.addEventListener("click", function () {
+     const squareA = this.parentNode;
+     let squareB = squareA.nextElementSibling;
+     if (!squareB) {
+       squareB = squareA.previousElementSibling;
+     }
 
-//      swapSquares(squareA, squareB );
-//    });
-//  });
+     swapSquares(squareA, squareB );
+   });
+ });
 
-//  function swapSquares(squareA, squareB) {
-//    const parent = squareA.parentNode;
-//    parent.replaceChild(squareB, squareA);
-//    parent.appendChild(squareA);
-//  }
+ function swapSquares(squareA, squareB) {
+   const parent = squareA.parentNode;
+   parent.replaceChild(squareB, squareA);
+   parent.appendChild(squareA);
+ }
 
 
 // =========================================================================================
@@ -228,35 +226,36 @@
 // 14-To‘plangan ballar hisoblagichi
 // Vazifa: Sahifada bir nechta div elementlar bo‘lsin, ular ustida "Ball qo‘shish" tugmasi bo‘lsin. Har safar tugma bosilganda, blok ichidagi matn sifatida 1 ball qo‘shiladi (0 dan boshlanadi). Foydalanuvchi sahifada qancha ball to‘plaganini hisoblash uchun pastda umumiy ball ko‘rsatadigan alohida blok bo‘lsin.
 // Ishlatiladigan mavzular: textContent, classList.add, classList.contains.
-// let totalPoints = 0;
-// document.querySelectorAll(".add-score").forEach((button) => {
-//   button.addEventListener("click", function () {
-//     const score = this.previousElementSibling;
-//     let currentScore = parseInt(score.textContent);
-//     currentScore++;
-//     score.textContent = currentScore;
-//     totalPoints++;
-//     document.getElementById("totalPoints").textContent = totalPoints;
-//   });
-// });
+let totalPoints = 0;
+document.querySelectorAll(".add-score").forEach((button) => {
+  button.addEventListener("click", function () {
+    const score = this.previousElementSibling;
+    let currentScore = parseInt(score.textContent);
+    currentScore++;
+    score.textContent = currentScore;
+    totalPoints++;
+    document.getElementById("totalPoints").textContent = totalPoints;
+  });
+});
+
 
 // =========================================================================================
 // =========================================================================================
 // 15-Elementlarni tartiblash
 // Vazifa: Sahifada bir nechta elementlar (matnli bloklar) bo‘lsin. Har bir element yonida "Yuqoriga" va "Pastga" tugmalari bo‘lsin. Tugmalar yordamida foydalanuvchi elementlarni yuqoriga yoki pastga surib tartibini o‘zgartira olsin.
 // Ishlatiladigan mavzular: parentNode, before, after.
-//  document
-//    .getElementById("itemsContainer")
-//    .addEventListener("click", function (event) {
-//      const button = event.target;
-//      if (button.tagName === "BUTTON") {
-//        const item = button.closest(".item");
-//        const parent = item.parentNode;
-//        if (button.classList.contains("moveUp") && item.previousElementSibling) {
-//          parent.insertBefore(item, item.previousElementSibling);
-//        }
-//        if (button.classList.contains("moveDown") && item.nextElementSibling) {
-//          parent.insertBefore(item, item.nextElementSibling.nextElementSibling);
-//        }
-//      }
-//    });
+ document
+   .getElementById("itemsContainer")
+   .addEventListener("click", function (event) {
+     const button = event.target;
+     if (button.tagName === "BUTTON") {
+       const item = button.closest(".item");
+       const parent = item.parentNode;
+       if (button.classList.contains("moveUp") && item.previousElementSibling) {
+         parent.insertBefore(item, item.previousElementSibling);
+       }
+       if (button.classList.contains("moveDown") && item.nextElementSibling) {
+         parent.insertBefore(item, item.nextElementSibling.nextElementSibling);
+       }
+     }
+   });
